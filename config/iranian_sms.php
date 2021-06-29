@@ -40,5 +40,12 @@ return [
         'gateway' => env('IRANIANSMS_PARSASMS_GATEWAY','http://api.parsasms.com/v2/sms/send/simple'),
         'api_key' => env('IRANIANSMS_PARSASMS_APIKEY','test'),
         'sender' => env('IRANIANSMS_PARSASMS_SENDER','test')
+    ],
+
+    'smsg' => [
+    'gateway' => env('SMSG_GATEWAY', 'http://smsg.ir/index2.php'),
+    'user' => env('SMSG_USER', 'test'),
+    'pass'  => env('SMSG_PASS', 'test'),
+    'number'  => env('SMSG_NUMBER', 'test'),
     ]
 ];

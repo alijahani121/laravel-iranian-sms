@@ -8,6 +8,7 @@ use Tartan\IranianSms\Adapter\MehrAfzar;
 use Tartan\IranianSms\Adapter\KaveNegar;
 use Tartan\IranianSms\Adapter\ParsaSms;
 use Tartan\IranianSms\Adapter\Slack;
+use Tartan\IranianSms\Adapter\SmsG;
 use Tartan\IranianSms\Adapter\SmsIr;
 use Tartan\IranianSms\Adapter\SmsLog;
 
@@ -44,6 +45,9 @@ class Factory
                 break;
             case 'parsasms':
                 return new ParsaSms($account);
+                break;
+            case 'smsg':
+                return new SmsG($account);
                 break;
             default:
                 throw new Exception('Adapter not defined');
